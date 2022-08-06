@@ -1,0 +1,280 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,"noto sans cjk tc",Helvetica,Arial,sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+.banner{
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week2/banner.png?raw=true");
+    background-position: center;
+    height: 958px;
+    background-repeat: no-repeat;
+	background-size: cover; 
+}
+
+.text-white{
+	color:#fff
+}
+
+.bg-second{
+	background: #000;
+}
+.d-flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.fz-1{
+	font-size: 8px;
+}
+
+.fz-3{
+	font-size: 24px;
+}
+.fz-8{
+	font-size: 64px;
+}
+
+.fz-10{
+	font-size: 80px;
+}
+
+.lh-1{
+	line-height: 1.5;
+}
+
+.lh-2{
+	line-height: 1.75;
+}
+
+.mb-1{
+	margin-bottom: 8px;
+}
+
+.mb-2{
+	margin-bottom: 16px;
+}
+
+.mb-3{
+	margin-bottom: 24px;
+}
+
+.mb-4{
+	margin-bottom: 32px;
+}
+
+.mb-5{
+	margin-bottom: 40px;
+}
+
+.mb-7{
+	margin-bottom: 56px;
+}
+
+.fw-bold{
+	font-weight: 700;
+}
+
+.fw-black{
+	font-weight: 900;
+}
+
+.banner h1{
+	line-height: 1.325;
+}
+
+.banner .iconImg{
+	display: flex;
+}
+
+.iconImg li+li{
+	width: 60px;
+	height: 60px;
+	margin-left: 16px;
+}
+
+.about{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.about img{
+	width: 384px;
+	height: 384px;
+	margin-bottom: 20px;
+}
+
+.about p:first-child{
+	margin-bottom: 4px;
+}
+
+.about .department{
+	padding-bottom: 24px;
+	border-bottom: 1px solid #000;
+	margin-bottom: 28px;
+}
+
+.about .design p::before{
+	content: "";
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-right: 16px;
+	border-radius: 50%;
+	background: #891818;
+}
+
+.about .design .designTxt{
+	margin-bottom: 28px;
+}
+
+.brand{
+	padding-top: 56px;
+	text-align: center;
+}
+
+.brand h2{
+	line-height: 1.3125;
+	margin-bottom: 12px;
+}
+
+.brand .brandTxt{
+	font-size: 20px;
+	margin-bottom: 68px;
+}
+
+.brand img{
+	width: 792px;
+	height: 416px;
+}
+
+.brand .brandImg{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 160px;
+	margin-bottom: 56px;
+}
+
+.brand .brandImg img{
+	width: 588px;
+	height: 416px;
+}
+
+.brand .brandImg img:first-child{
+	margin-right: 24px;
+}
+.other{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.other h2{
+	line-height: 1.3125;
+}
+
+.other h2 p{
+	font-size: 20px;
+}
+
+.other .imgArea{
+	display: flex;
+	/* flex-direction: column; */
+}
+
+.other .img{
+	margin: 0 12px 48px 12px;
+}
+
+.other .img p{ 
+	/* margin: 0 12px 48px 12px; */
+	font-size: 20px;
+	line-height: 2.1;
+}
+
+.other .img img{
+	width: 384px;
+	height: 528px;
+	margin-bottom: 16px;
+	vertical-align: middle;
+}
+
+
+.other .imgBetween .img img{
+	width: 588px;
+	height: 424px;
+	/* margin-bottom: 16px;
+	vertical-align: middle; */
+}
+
+.other .imgUnder .img img{
+	width: 384px;
+	height: 280px;
+	/* margin-bottom: 16px;
+	vertical-align: middle; */
+}
+
+.other .imgUnder .img{
+	margin-bottom: 144px;
+}
+
+.contact{
+	text-align: center;
+	padding: 64px 0;
+}
+
+.contact h2{
+	line-height: 1.3125;
+}
