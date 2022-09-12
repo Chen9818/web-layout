@@ -1,0 +1,12 @@
+//RWD
+@mixin ipad {
+    @media screen and (max-width:992px){
+        @content;
+    }
+};
+
+@mixin phone {
+    @media screen and (max-width:720px){
+        @content
+    }
+};

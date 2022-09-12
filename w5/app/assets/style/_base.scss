@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, "noto sans cjk tc", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+    height: 100%;
+    color: $gray-900;
+}

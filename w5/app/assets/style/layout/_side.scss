@@ -1,0 +1,35 @@
+aside{
+    height: 1000px;
+    background: $gray-100;
+    .side ul a{
+        color: $gray-900;
+        position: relative;
+        &:hover{
+            color: $success;
+        }
+    }
+    // .clicked{
+    //     &::before{
+    //         content: "";
+    //         width: 4px;
+    //         height: 32px;
+    //         background: $success;
+    //         top: -4px;
+    //         left: -32px;
+    //         bottom: 0;
+    //         position: absolute;
+    //     }
+    // }
+    .ava{
+        padding-right: 80px;
+        img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        span{
+            color: $gray-600;
+        }
+    }
+}

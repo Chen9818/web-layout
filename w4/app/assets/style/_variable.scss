@@ -1,0 +1,68 @@
+$primary:  #AA0601;
+$secondary: #FBF2F2;
+$dark: #000;
+$border:#00000020;
+$text-primary: #fff;
+
+//字體大小
+.fz-5{
+    font-size: 20px;
+}
+
+.fz-6{
+    font-size: 24px;
+}
+
+.fz-9{
+    font-size: 36px;
+}
+
+.fz-12{
+    font-size: 48px;
+}
+
+//font-weight
+.bold{
+    font-weight: 700;
+}
+
+//margin-bottom
+$mb: 4px;
+
+.mb-1{
+    margin-bottom: $mb;
+}
+
+.mb-2{
+    margin-bottom: $mb*2;
+}
+
+.mb-8{
+    margin-bottom: $mb*8;
+}
+
+.mb-9{
+    margin-bottom: $mb*9;
+}
+
+.mb-10{
+    margin-bottom: $mb*10;
+}
+
+.mb-12{
+    margin-bottom: $mb*12;
+}
+
+
+.container{
+    max-width: 1320px;
+    margin: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    @include phone(){
+        max-width: 375px;
+    }
+    /* 依照設計稿 PC 版：
+   * 容器寬度為 1296px，因為有設定為 border-box，所以整體寬度需加上左右 padding
+   * 整體 container 寬度為 1296px + 12px*2 = 1320px   */
+}

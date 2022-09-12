@@ -1,0 +1,29 @@
+.header{
+    height: 90px;
+    background: $secondary;
+    position: relative;
+    .logo{
+        display: block;
+        width: 175px;
+        height: 42px;
+    }
+    ul{
+        list-style-type: none;
+    }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-image: linear-gradient(90deg, $info 50%, $info2 50%);
+        top: 90px;
+        right: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-item{
+        margin: 0;
+    }
+}

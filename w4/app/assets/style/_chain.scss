@@ -1,0 +1,61 @@
+.chain{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    .chain-info{
+        padding: 0 12px;
+        width: 50%;
+        img{
+            vertical-align: middle;
+            max-width: 100%;
+            @include ipad(){
+                width: 48.78%;
+                padding: 0 12px 0 0;
+            }
+            @include phone(){
+                width: 100%;
+                padding: 0 12px;
+            }
+        }
+        .chain-name{
+            h2{
+                border: 1px solid $border;
+                padding: 8px 24px;
+            }
+            .chain-contact{
+                padding: 16px 26px;
+                border: 1px solid $border;
+            }
+            span{
+                margin-right: 11px;
+            }
+        }
+        @include ipad(){
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom:24px;
+            padding: 0;
+            .chain-name{
+                width: 48.78%;
+                padding: 0 0 0 12px;
+                @include phone(){
+                    width: 100%;
+                    padding: 0 12px;
+                }
+            }
+        }
+    }
+    .chain-map{
+        padding: 0 12px;
+        width: 50%;
+        img{
+            vertical-align: middle;
+            max-width: 100%;
+        }
+        @include ipad(){
+            width: 100%;
+        }
+    }
+}

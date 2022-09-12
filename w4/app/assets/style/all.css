@@ -1,0 +1,486 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+body {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,"noto sans cjk tc",Helvetica,Arial,sans-serif;
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fz-5 {
+  font-size: 20px;
+}
+
+.fz-6 {
+  font-size: 24px;
+}
+
+.fz-9 {
+  font-size: 36px;
+}
+
+.fz-12 {
+  font-size: 48px;
+}
+
+.mb-1 {
+  margin-bottom: 4px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.mb-9 {
+  margin-bottom: 36px;
+}
+
+.mb-10 {
+  margin-bottom: 40px;
+}
+
+.mb-12 {
+  margin-bottom: 48px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  /* 依照設計稿 PC 版：
+   * 容器寬度為 1296px，因為有設定為 border-box，所以整體寬度需加上左右 padding
+   * 整體 container 寬度為 1296px + 12px*2 = 1320px   */
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+header, footer {
+  background: #AA0601;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  background: #AA0601;
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.header .logo {
+  background-image: url("../images/logo-white.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80px;
+  height: 48px;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 64px;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  .header ul {
+    display: none;
+  }
+}
+
+.nav-sm {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .nav-sm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .nav-sm li {
+    text-align: center;
+    width: 50%;
+    border: 1px solid #fff;
+    padding: 12px 0;
+  }
+  .nav-sm li a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 32px;
+  background: #AA0601;
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    padding: 24px 0px;
+  }
+}
+
+.footer .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .footer-nav {
+    display: none;
+  }
+}
+
+.footer .footer-nav .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 48px;
+}
+
+.footer .footer-nav .nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .footer-nav .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+}
+
+.footer .footer-nav .icon li a img {
+  width: 48px;
+  height: 48px;
+}
+
+.footer .footer-contact-sm .footer-contact {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  font-size: 36px;
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .footer-contact-sm .footer-contact {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+}
+
+.footer .footer-contact-sm .footer-contact li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .footer-contact-sm .footer-contact li a span {
+  margin-right: 22px;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .footer-contact-sm .footer-contact li a span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer .footer-contact-sm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 24px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.footer .footer-contact-sm .icon {
+  display: none;
+}
+
+.footer .footer-contact-sm .icon li a img {
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .footer-contact-sm .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+  }
+  .footer .footer-contact-sm .icon li a img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footer .right {
+  color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .right {
+    margin-bottom: 8px;
+  }
+}
+
+.footer .privacy {
+  color: #fff;
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .privacy {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.footer .service {
+  color: #fff;
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .footer .service {
+    display: block;
+  }
+}
+
+.location {
+  padding-top: 96px;
+  padding-bottom: 52px;
+}
+
+@media screen and (max-width: 720px) {
+  .location {
+    padding-top: 40px;
+    padding-bottom: 36px;
+  }
+}
+
+.location h1 {
+  border-left: 8px solid #AA0601;
+  padding-left: 16px;
+  margin-bottom: 33px;
+}
+
+@media screen and (max-width: 720px) {
+  .location h1 {
+    font-size: 24px;
+  }
+}
+
+.location .region-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+@media screen and (max-width: 720px) {
+  .location .region-select {
+    gap: 8px;
+  }
+  .location .region-select h2 {
+    font-size: 16px;
+    width: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.location .region-select select {
+  padding: 6px 238px 6px 12px;
+}
+
+@media screen and (max-width: 720px) {
+  .location .region-select select {
+    padding: 6px 0px 6px 12px;
+    width: 276px;
+  }
+}
+
+.location .region {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  max-width: 1296px;
+}
+
+.location .region li {
+  width: 33.333%;
+  padding: 0 12px;
+}
+
+@media screen and (max-width: 992px) {
+  .location .region li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .location .region li {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.location .region li img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.location .region li h3 {
+  padding: 8px 24px;
+  border: 1px solid #00000020;
+}
+
+.location .region li .region-info {
+  padding: 16px 26px;
+  border-left: 1px solid #00000020;
+  border-right: 1px solid #00000020;
+}
+
+.location .region li .region-info p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.location .region li .region-info span {
+  margin-right: 11px;
+}
+
+.location .region li .detail {
+  text-align: center;
+  font-size: 19px;
+  background: #000;
+  color: #fff;
+  padding: 16px 0px;
+}
+
+.chian {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+
+.chian .chain-info {
+  max-width: 526px;
+}
+
+.chian .chain-info img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.chian .chain-map {
+  max-width: 746px;
+}
+/*# sourceMappingURL=all.css.map */

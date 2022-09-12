@@ -1,0 +1,84 @@
+.location{
+    padding-top: 96px;
+    padding-bottom: 52px;
+    @include phone(){
+        padding-top: 40px;
+        padding-bottom: 36px;
+    }
+    //門市據點
+    h1{
+        border-left: 8px solid $primary;
+        padding-left: 16px;
+        margin-bottom: 33px;
+        @include phone(){
+            font-size: 24px;
+        }
+    }
+    //下拉選單
+    .region-select{
+        display: flex;
+        gap: 16px;
+        @include phone(){
+            gap: 8px;
+            h2{
+                font-size: 16px;
+                width: 64px;
+                display: flex;
+                align-items: center ;
+            }
+        }
+        select{
+            padding: 6px 238px 6px 12px;
+            @include phone(){
+                padding: 6px 0px 6px 12px;
+                width: 276px; 
+            }
+        }
+    }
+
+    .region{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 1296px;
+        li{
+            @include ipad(){
+                width: 50%;
+            }
+            @include phone(){
+                width: 100%;
+                padding: 0;
+            }
+            width: 33.333%;
+            padding: 0 12px;
+            flex-direction: column;
+            img{
+                max-width: 100%;
+                vertical-align: middle;
+            }
+            h3{
+                padding: 8px 24px;
+                border: 1px solid $border;
+            }
+            .region-info{
+                padding: 16px 26px;
+                border-left: 1px solid $border;
+                border-right: 1px solid $border;
+                flex-grow: 1;
+                p{
+                    display: flex;
+                }
+                span{
+                    margin-right: 11px;
+                }
+            }
+            .detail{
+                text-align: center;
+                font-size: 19px;
+                background: $dark;
+                color: $text-primary;
+                padding: 16px 0px;
+            }
+        }
+    }
+}
